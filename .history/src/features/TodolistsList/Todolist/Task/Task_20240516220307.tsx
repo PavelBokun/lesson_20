@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useCallback } from "react";
 import { Checkbox, IconButton } from "@mui/material";
-import { Delete } from "@mui/icons-material";
+import { Delete, Opacity } from "@mui/icons-material";
 import { TaskType } from "features/TodolistsList/todolists.api";
 import { EditableSpan } from "common/components";
 import { TaskStatuses } from "common/enums";
@@ -36,7 +36,7 @@ export const Task = (props: TaskProps) => {
    
 
   return (
-    <div key={props.task.id} className={props.task.status === TaskStatuses.Completed ? "is-done" : ""}>
+    <div key={props.task.id} className={props.task.status === TaskStatuses.Completed ? {style:{opacity:0.5}} : ""}>
       <Checkbox checked={props.task.status === TaskStatuses.Completed} color="primary" onChange={changeTaskStatusHandler} />
 
       <EditableSpan value={props.task.title} onChange={onTitleChangeHandler} />

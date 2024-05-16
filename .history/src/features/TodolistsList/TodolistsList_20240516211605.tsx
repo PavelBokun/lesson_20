@@ -82,7 +82,9 @@ export const TodolistsList = () => {
                   removeTask={removeTask}
                   changeFilter={changeFilter}
                   addTask={addTask}
+                  changeTaskStatus={changeStatus}
                   removeTodolist={removeTodolist}
+                  changeTaskTitle={changeTaskTitle}
                   changeTodolistTitle={changeTodolistTitle}
                 />
               </Paper>

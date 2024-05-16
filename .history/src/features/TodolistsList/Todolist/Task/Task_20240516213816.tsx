@@ -7,13 +7,15 @@ import { TaskStatuses } from "common/enums";
 import { useActions } from "common/hooks";
 import { tasksThunks } from "features/TodolistsList/tasks.reducer";
 
-type TaskProps = {
+type TaskPropsType = {
   task: TaskType;
   todolistId: string;
   removeTask: (taskId: string, todolistId: string) => void;
 };
 
-export const Task = (props: TaskProps) => {
+
+
+export const Task = (props: TaskPropsType) => {
   const { updateTask } = useActions(tasksThunks);
   const onClickHandler = useCallback(
     () => props.removeTask(props.task.id, props.todolistId),

@@ -36,7 +36,7 @@ export const Task = (props: TaskProps) => {
    
 
   return (
-    <div key={props.task.id} className={props.task.status === TaskStatuses.Completed ? "is-done" : ""}>
+    <div key={props.task.id} className={props.task.status === TaskStatuses.Completed ?s : ""}>
       <Checkbox checked={props.task.status === TaskStatuses.Completed} color="primary" onChange={changeTaskStatusHandler} />
 
       <EditableSpan value={props.task.title} onChange={onTitleChangeHandler} />

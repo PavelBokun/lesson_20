@@ -24,7 +24,7 @@ export const TodolistsList = () => {
     changeTodolistTitle: changeTodolistTitleThunk,
   } = useActions(todolistsThunks);
 
-  const { addTask: addTaskThunk, removeTask: removeTaskThunk } = useActions(tasksThunks);
+  const { addTask: addTaskThunk, removeTask: removeTaskThunk, updateTask } = useActions(tasksThunks);
   const { changeTodolistFilter } = useActions(todolistsActions);
 
   useEffect(() => {
@@ -82,7 +82,9 @@ export const TodolistsList = () => {
                   removeTask={removeTask}
                   changeFilter={changeFilter}
                   addTask={addTask}
+                  changeTaskStatus={changeStatus}
                   removeTodolist={removeTodolist}
+                  changeTaskTitle={changeTaskTitle}
                   changeTodolistTitle={changeTodolistTitle}
                 />
               </Paper>
